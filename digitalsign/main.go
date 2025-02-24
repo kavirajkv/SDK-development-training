@@ -40,7 +40,7 @@ func getDigitalsign(w http.ResponseWriter, r *http.Request) {
 	public, private, _ := sign.GenerateKeypair()
 	msgdigest := digest.ShaDigest(message.Message) //SHA256 to create digest
 
-	sign := sign.Digitalsign(private, msgdigest)
+	sign ,_:= sign.Digitalsign(private, msgdigest)
 
 	response := signature{Message: message.Message, Sign: sign, Publickey: public}
 
@@ -59,10 +59,13 @@ func verifySign(w http.ResponseWriter, r *http.Request) {
 
 	msgdigest := digest.ShaDigest(digitalsign.Message)
 
-	verified := sign.Verifysign(digitalsign.Publickey, msgdigest, digitalsign.Sign)
-
-	//returns verification status
-	if verified {
+	verified ,err:= sign.Verifysign(digitalsign.Publickey, msgdigest, digitalsign.Sign)
+	
+	// returns staus and validity
+	if err!=nil{
+		response:=verification{Status: "Invalid key size or key", Valid: false}
+		json.NewEncoder(w).Encode(response)
+	}else if verified {
 		successresponse := verification{Status: "Signature verified successfully - Valid", Valid: true}
 		json.NewEncoder(w).Encode(successresponse)
 	} else {

@@ -2,3 +2,5 @@ github.com/gorilla/mux v1.8.1 h1:TuBL49tXwgrFYWhqrNgrUNEY92u81SPhu7sTdzQEiWY=
 github.com/gorilla/mux v1.8.1/go.mod h1:AKf9I4AEqPTmMytcMc0KkNouC66V3BtZ4qD5fmWSiMQ=
 github.com/kavirajkv/security v0.0.0-20250223070514-6eeddc71c4a1 h1:kVqPWAuWbsgZVHrVTj9fErBKw05GEqNEUpOeCsc0mRw=
 github.com/kavirajkv/security v0.0.0-20250223070514-6eeddc71c4a1/go.mod h1:ztNXEZhImyF/jqli6wNs3TD35MHBCRXcnPRkkxffAB4=
+github.com/kavirajkv/security v0.0.0-20250223183516-6eda2375f228 h1:0VtQG6Z/r/T/VyHD4RnkQSJUV7xROwt3ZFnLnOV8Lr4=
+github.com/kavirajkv/security v0.0.0-20250223183516-6eda2375f228/go.mod h1:ztNXEZhImyF/jqli6wNs3TD35MHBCRXcnPRkkxffAB4=
