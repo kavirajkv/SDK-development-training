@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="digitalsign_sdk",
-    version="0.1.0",
+    name="digitalsignature",
+    version="0.2.0",
     description="Python SDK for my digital sign Go backend API",
     author="Kaviraj K",
     author_email="kavirajk36kv@gmmail.com",
